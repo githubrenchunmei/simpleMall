@@ -1,4 +1,5 @@
 const mongooes = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
 const User = mongooes.Schema({
     userName: {
@@ -25,6 +26,7 @@ const User = mongooes.Schema({
         type: String
     }
 });
-
+// 添加分页插件
+User.plugin(mongoosePaginate);
 const UserModel = mongooes.model('User', User);
 module.exports = UserModel;
