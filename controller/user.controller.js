@@ -197,8 +197,7 @@ exports.promoteAdmin = async (req, res, next) => {
  */
 exports.userList = async (req, res, next) => {
     try {
-        let { limitNum = 10, pageNum = 1} = req.body;
-        console.log(limitNum);
+        let { limitNum = 10, pageNum = 1} = req.query;
         let paginateInfo = await UserModel.paginate({},{
             select: '',
             page: pageNum,

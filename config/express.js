@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({
 app.use(session({
     secret: 'express_cookie',
     resave: true,
+    name: 'session',//设置cookie的name
     saveUninitialized: true,
     cookie: {
         maxAge: 60 * 1000 * 60

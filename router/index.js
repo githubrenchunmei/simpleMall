@@ -58,12 +58,12 @@ Router.post('/login', multipartMiddleware, userController.Login);
 //退出登录
 Router.post('/logout', multipartMiddleware, userController.Logout);
 //查询当前用户信息
-Router.post('/getUserInfo', multipartMiddleware, userController.getUserInfo);
+Router.get('/getUserInfo', multipartMiddleware, userController.getUserInfo);
 //更新当前用户信息
 Router.post('/update', multipartMiddleware, userController.update);
 //提升其他用户权限
 Router.post('/promoteAdmin', multipartMiddleware, userController.promoteAdmin);
 //获取用户列表
-Router.post('/userList', multipartMiddleware, userController.userList);
+Router.get('/userList', multipartMiddleware, userController.userList);
 
 module.exports = Router;
